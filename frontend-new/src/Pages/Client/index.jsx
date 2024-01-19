@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import Navbar from "../../Components/Navbar";
-import ClientTable from "../../Components/ClientTable";
-import ClientTableCompleted from "../../Components/ClientTableCompleted";
 import close from "./../../Assets/close.svg";
 import { Modal } from "antd";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -19,9 +16,12 @@ import { useSDK } from "@metamask/sdk-react";
 import toast, { Toaster } from "react-hot-toast";
 
 import UserTableCompleted from "../../Components/UserTableCompleted";
-import UserTable from "../../Components/UserTable";
+import Account from "../../Components/Account/Account";
 import UserTxHistory from "../../Components/UserTxHistory";
-
+import Card from "../../Components/Lendercard/card";
+import swap from "./swap.png";
+import Send from "../../Components/Send/Send";
+import Swap from "../../Components/Swap/Swap";
 
 const baseURL = "http://192.168.206.90/api/v1";
 
@@ -106,19 +106,19 @@ const TxModal = ({
               <IoWarningOutline size={40} />
               <div>
                 You need to pay a base fees for training your model. You will be
-                charged an additional fees of 0.01ETH per epoch. You will be
+                charged an additional fees of 0.1GHO per epoch. You will be
                 charged a gas fee for the transaction.
               </div>
             </div>
           </div>
           <div className={styles.modalContentItem}>
             <div className={styles.modalContentItemValue}>
-              Base Fees: 0.05 ETH
+              Base Fees: 0.05 GHO
             </div>
-            <div>Protocol Fees: 0.0002ETH</div>
+            <div>Protocol Fees: 0.0002GHO</div>
           </div>
           <div className={styles.gasHeader}>Gas Data</div>
-          <div className={styles.gasHeader}>Sepolia Testnet</div>
+          <div className={styles.gasHeader}>GHO</div>
           <div className={styles.modalContentItem}>
             <div className={styles.gasContainer}>
               <div className={styles.modalContentItemLabel}>
@@ -212,111 +212,30 @@ const TaskModal = ({
       closeIcon={<img src={close} alt="" />}
     >
       <div className={styles.modalContainer}>
-        <div className={styles.modalTitle}>Add new model</div>
+        <div className={styles.modalTitle}>Get FIAT</div>
         <div className={styles.modalContent}>
+          
+          {/* <div  className={styles.swap} >
+          <img src={swap} />
+          </div> */}
           <div className={styles.modalContentItem}>
-            Model Name
+            Pay
             <input
               className={styles.modalContentItemInput}
-              placeholder=""
-              onChange={(e) => setName(e.target.value)}
-            />
-            {/* <img src={UsdcLogo} alt="" /> */}
-          </div>
-          <div className={styles.modalContentItem}>
-            Model Type
-            <FormControl fullWidth>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={modelType}
-                onChange={(e) => setModelType(e.target.value)}
-                sx={{
-                  color: "#fff",
-                  fontFamily: "Inter-Tight",
-                  fontWeight: 500,
-                  fontSize: 20,
-                }}
-              >
-                <MenuItem value={"CNN"}>CNN</MenuItem>
-                <MenuItem value={"RNN"}>RNN</MenuItem>
-                <MenuItem value={"MLP"}>MLP</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          {/* <div className={styles.modalContentItem}>
-            No. of Clients
-            <input
-              className={styles.modalContentItemInput}
-              placeholder=""
-              value={clientNumber}
-              onChange={(e) => setClientNumber(Number(e.target.value))}
-            />
-            {/* <img src={UsdcLogo} alt="" /> */}
-          {/*</div>
-          <div className={styles.modalContentItem}>
-            No. of Layers
-            <input
-              className={styles.modalContentItemInput}
-              placeholder=""
-              value={layerNumber}
-              onChange={(e) => setLayerNumber(Number(e.target.value))}
-            />
-            {/* <img src={UsdcLogo} alt="" /> */}
-          </div>  
-          <div className={styles.modalContentItem}>
-            Activation Function
-            <FormControl fullWidth>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={activationFn}
-                onChange={(e) => setActivationFn(e.target.value)}
-                sx={{
-                  color: "#fff",
-                  fontFamily: "Inter-Tight",
-                  fontWeight: 500,
-                  fontSize: 20,
-                }}
-              >
-                <MenuItem value={"Sigmoid"}>Sigmoid</MenuItem>
-                <MenuItem value={"ReLU"}>ReLU</MenuItem>
-                <MenuItem value={"Softmax"}>Softmax</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className={styles.modalContentItem}>
-            Optimizer
-            <FormControl fullWidth>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={optimiser}
-                onChange={(e) => setOptimiser(e.target.value)}
-                sx={{
-                  color: "#fff",
-                  fontFamily: "Inter-Tight",
-                  fontWeight: 500,
-                  fontSize: 20,
-                }}
-              >
-                <MenuItem value={"SGD"}>SGD</MenuItem>
-                <MenuItem value={"Adam"}>Adam</MenuItem>
-                <MenuItem value={"Adagrad"}>Adagrad</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className={styles.modalContentItem}>
-            Obtained Accuracy
-            <input
-              className={styles.modalContentItemInput}
-              placeholder="in %"
+              placeholder="GHO"
               value={value}
               onChange={(e) => setValue(Number(e.target.value))}
             />
-            {/* <img src={UsdcLogo} alt="" /> */}
           </div>
-          <input className={styles.modalInputFile} type="file" />
+          <div className={styles.modalContentItem}>
+            Receive
+            <input
+              className={styles.modalContentItemInput}
+              placeholder="EUR"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          
         </div>
         <div className={styles.modalButtonGroup}>
           <button
@@ -331,9 +250,10 @@ const TaskModal = ({
                 }}
               />
             ) : (
-              "ADD"
+              "GET"
             )}
           </button>
+        </div>
         </div>
       
     </Modal>
@@ -355,24 +275,22 @@ const UserDashboard = () => {
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
+  
   return (
     <>
       <Navbar />
       <div className={styles.container}>
         <h1>My Lendings</h1>
         <div className={styles.tabs}>
-          <button
-            className={styles.button}
-            onClick={() => setCreateVisible(true)}
-          >
-            Add Model
-          </button>
+          
           <div
             className={activeTab === 0 ? styles.tabActive : styles.tab}
             onClick={() => handleTabChange(0)}
           >
-            Buy P2P
+            Lended Models
           </div>
+         <Send/>
+         <Swap/>
           <div
             className={activeTab === 1 ? styles.tabActive : styles.tab}
             onClick={() => handleTabChange(1)}
@@ -380,25 +298,36 @@ const UserDashboard = () => {
             Sell P2P 
           </div>
           <div
-            className={activeTab === 1 ? styles.tabActive : styles.tab}
+            className={activeTab === 2 ? styles.tabActive : styles.tab}
             onClick={() => handleTabChange(2)}
           >
-            Get FIAT
+            Buy P2P 
           </div>
+          <button
+            className={styles.button}
+            onClick={() => setCreateVisible(true)}
+          >
+            Get Fiat
+          </button>
           <div
-            className={activeTab === 1 ? styles.tabActive : styles.tab}
+            className={activeTab === 3 ? styles.tabActive : styles.tab}
             onClick={() => handleTabChange(3)}
           >
             My Account
           </div>
         </div>
         {activeTab === 0 ? (
-          <UserTable />
+          <Card />
         ) : activeTab === 1 ? (
           <UserTableCompleted />
-        ) : (
+        ) : activeTab===2 ? (
           <UserTxHistory />
-        )}
+        ) : activeTab ===3 ? (
+          <Account />
+        ): (
+          <>Error occured</>
+        )
+      }
       </div>
       
       <TaskModal

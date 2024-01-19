@@ -99,7 +99,7 @@ const UserTxHistory = () => {
           pagination={false}
         />
       ) : (
-        <div className={styles.noData}>No Data Available</div>
+        <div className={styles.noData}></div>
       )}
     </>
   );
