@@ -8,3 +8,4 @@ that has GHO - AaVE's stablecoin as it's backbone.
   The transactions on cross chains/DEXs will be done securely through CCIP.
 * For making those models available for lending, they'll have to follow a Proof-of-Stake mechanism
   where they will stake a certain amount of GHO which then goes to the Aave DAO Treasury.
+* The [creditDelegationVault]().sol will be signed between model lender & borrower which will have a fixed deadline when the model has to be returned & also the interest that the user will have to pay throughout the period on a regular basis.
