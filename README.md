@@ -37,8 +37,7 @@ All of this process described above is smoothly iluustrated in the following dia
 ## FAQs
 * How does the facilitator aspect works ?
   Well, the concept is such that whenever the `availablecapacity()` of the lender is greater than the `BucketThreshold()` while simultaneously being less than the 
-  `BucketCapacity()`, the lender is elgible to act as a [Facilitator] 
-  (https://github.com/VasuK111/Swallet/blob/397ad13facf6ef6180964ab966de21a11739c1fa/contracts/Facilitator.sol).
+  `BucketCapacity()`, the lender is elgible to act as a [Facilitator](https://github.com/VasuK111/Swallet/blob/397ad13facf6ef6180964ab966de21a11739c1fa/contracts/Facilitator.sol).
 
 * What is the collateral that the GHO is being minted against in this case, is it the expectation of profit from the strategies?
   Every borrower who has borrowed a model signs an agreement with the lender, pays the upfront fees in GHO tokens.
