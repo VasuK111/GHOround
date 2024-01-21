@@ -15,7 +15,12 @@ import { useNavigate } from "react-router-dom";
 import gif from "../Home/gif.gif";
 
 
-
+// const Send =({transact, setTransact}) =>{
+//   const [pay, setPay] = useState(false);
+//   return(
+//     <div>Send</div>
+//   );
+// }
 
 
 const TaskModal = ({ visible, setVisible }) => {
@@ -175,6 +180,10 @@ const Option = () => {
         
         <TaskModal visible={visible} setVisible={setVisible} />
       </div>
+      {/* <a href="/users">
+            <button className={styles.actionButton} onClick={()=> setPay(true)} >
+              <Send pay={pay} setPay={setPay}/></button>
+          </a> */}
       </div>
       </div>
     
