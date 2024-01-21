@@ -2,8 +2,35 @@
     font-size: 20px;
     color: white;
     text-align:left;
-    margin: 20px
+    margin: 20px;
+    display: flex;
+    font-family: 'Playpen Sans', cursive;
 }
 .button:hover{
     cursor: pointer;
+    font-family: 'Playpen Sans', cursive;
 }
+
+.account{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.icon{
+    color:"secondary";
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: 'Playpen Sans', cursive;
+}
+.options{
+    align-self: center;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.button:hover{
+    color: white;
+    font-size: 32px;
+}
+
+

@@ -1,0 +1,198 @@
+
+.ghocard{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 0px;
+    cursor:pointer;
+    
+}
+
+.ghocard:hover{
+    color:#7278bb;
+    background-color: whitesmoke ;
+}
+
+.mintgho{
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.cards{
+    display:flex;
+    flex-direction: row;
+    column-gap: 25px;
+    align-items: center;
+}
+
+
+.card{
+    display:flex;
+    flex-direction: column;
+    background-color: #000435;
+    color:white;
+    border:1px solid whitesmoke; 
+    border-radius: 10px;
+    justify-content: space-evenly;
+    gap: 30px 0px;
+    height:320px;
+    width:300px;
+}
+.card:hover{
+  border:#ffffff;
+  cursor:pointer;
+}
+
+.cardTitle{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-grow: 3;
+    text-align: left;
+    font-weight: 300px;
+
+}
+
+.cardSubtitle{
+    flex-grow: 2;
+    text-align:left;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.button{
+    color: black;
+    background: whitesmoke;
+    font-weight: 400;
+    font-size: 30px;
+    flex-grow: 1;
+    font-weight:300;
+    border-radius: 10px;
+}
+
+.add{
+
+    height:150px;
+    width:150px;
+    background-color: #000435;
+    border: 0px;
+    align-self:center;
+}
+
+
+.modal {
+    color: #ffffff;
+  }
+  .modalHeader {
+    background: #16182e;
+    border-radius: 24px;
+    border: 2px solid #16182e;
+  }
+  .modalInput input {
+    background: #16182e;
+    border: none;
+  }
+  
+  .modalInput select {
+    background: #16182e;
+    border: none;
+  }
+  
+  .modalTitle {
+    font-size: 40px;
+    font-family: Inter-Tight;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .modalContentItem {
+    display: flex;
+    margin: 24px 0;
+    padding: 10px 20px;
+    background: #101124;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    gap: 6px;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align:center;
+  }
+
+  .modalContentItem1 {
+    display: flex;
+    margin: 24px 0;
+    padding: 10px 20px;
+    background: #101124;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    gap: 6px;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align:center;
+  }
+
+  
+  .modalContentItem img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  
+  .modalButtonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+  }
+  
+  .modalDepositButton {
+    width: 90%;
+    height: 50px;
+    background: #6802dd;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContentItemLabel {
+    font-size: 14px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .modalContentItemValue {
+    background: #101124;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  

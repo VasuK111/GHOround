@@ -4,7 +4,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 24px 240px;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   color: #ffffff;
   opacity: 0.7;
 }
@@ -28,7 +28,7 @@
   color: #a9a9b0 !important;
   border-radius: 0px !important;
   border: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
   font-size: 20px !important;
   font-weight: 500 !important;
 }
@@ -41,7 +41,7 @@
   background: #16182e !important;
   color: #a9a9b0 !important;
   border-bottom: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
   font-size: 16px !important;
 }
 
@@ -57,7 +57,7 @@
 
 .table li {
   border: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
 }
 
 .table li a {
@@ -65,7 +65,7 @@
   color: #a9a9b0 !important;
   border-radius: 0px !important;
   border: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
 }
 
 .tableItem {
@@ -111,7 +111,7 @@
   padding: 6px 12px;
   border-radius: 4px;
   background: rgba(14, 204, 131, 0.1);
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
   border: 1px solid #0ecc83;
 }
@@ -125,7 +125,7 @@
   padding: 6px 12px;
   border-radius: 4px;
   background: rgba(250, 60, 88, 0.1);
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
   border: 1px solid #fa3c58;
 }
@@ -140,7 +140,7 @@
 
 .header {
   color: #fff;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -162,7 +162,7 @@
 }
 
 .nodeNumber {
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -178,7 +178,7 @@
   padding: 8px 16px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;;
   font-weight: 600;
   background: #242944;
   border: 2px solid #242944;
@@ -199,7 +199,7 @@
   padding: 8px 16px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-weight: 600;
   background: transparent;
   border: 2px solid #242944;
@@ -214,7 +214,7 @@
   padding: 8px 16px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-weight: 600;
   border: 2px solid #242944;
   color: #ffffff;
@@ -233,7 +233,7 @@
   color: #a9a9b0 !important;
   border-radius: 0px !important;
   border: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
   font-size: 20px !important;
   font-weight: 500 !important;
 }
@@ -246,7 +246,7 @@
   background: #16182e !important;
   color: #a9a9b0 !important;
   border-bottom: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
   font-size: 16px !important;
 }
 
@@ -256,7 +256,7 @@
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid #a9a9b0 !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
   height: 200px;
 }
 
@@ -270,7 +270,7 @@
   color: #a9a9b0 !important;
   border-radius: 0px !important;
   border: none !important;
-  font-family: Inter-Tight !important;
+  font-family: 'Playpen Sans', cursive !important;
 }
 
 .tableItem {
@@ -316,7 +316,7 @@
   padding: 6px 12px;
   border-radius: 4px;
   background: rgba(14, 204, 131, 0.1);
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
   border: 1px solid #0ecc83;
 }
@@ -330,7 +330,7 @@
   padding: 6px 12px;
   border-radius: 4px;
   background: rgba(250, 60, 88, 0.1);
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
   border: 1px solid #fa3c58;
 }
@@ -347,7 +347,7 @@
 
 .header {
   color: #fff;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -369,7 +369,7 @@
 }
 
 .nodeNumber {
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -414,7 +414,7 @@
 
 .modalTitle {
   font-size: 20px;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   font-style: normal;
   font-weight: 400;
   color: #ffffff;

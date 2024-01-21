@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MetaMaskProvider } from '@metamask/sdk-react';
+
 // import { WagmiConfig, createConfig } from "wagmi";
 // import { sepolia } from "wagmi/chains";
 // import { ConnectKitProvider, getDefaultConfig } from "connectkit";

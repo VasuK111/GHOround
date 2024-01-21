@@ -18,8 +18,7 @@ import toast, { Toaster } from "react-hot-toast";
 import UserTableCompleted from "../../Components/UserTableCompleted";
 import Account from "../../Components/Account/Account";
 import UserTxHistory from "../../Components/UserTxHistory";
-import Card from "../../Components/Lendercard/card";
-import swap from "./swap.png";
+import Card from "../../Components/Lender/Lendercard/card";
 import Send from "../../Components/Send/Send";
 import Swap from "../../Components/Swap/Swap";
 

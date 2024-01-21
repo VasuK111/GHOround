@@ -79,7 +79,7 @@ const UserTableCompleted = () => {
           pagination={false}
         />
       ) : (
-        <div className={styles.noData}></div>
+        <div className={styles.noData}>No Data Available</div>
       )}
     </>
   );

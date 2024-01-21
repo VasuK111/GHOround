@@ -3,8 +3,7 @@ import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 import BlockiesSvg from "blockies-react-svg";
 import { useSDK } from "@metamask/sdk-react";
-import gif from "../Navbar/gif.gif";
-import Mint from "../Mint/index";
+
 
 const Navbar = () => {
   const { account } = useSDK();
@@ -14,11 +13,10 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar} >
-      <div className={styles.navListLeft} styles={{backgroundImage:`url(${gif})`}}>
+      <div className={styles.navListLeft} >
         <div className={styles.navItem}>
           <Link to="/">Home</Link>
         </div>
-        <div><Mint/></div>
       </div>
       <div className={styles.navListRight}>
         <div className={styles.wallet}>

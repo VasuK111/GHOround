@@ -1,8 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .content {
   position: absolute;
@@ -19,51 +15,43 @@ body {
   font-size: 2rem;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: white;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 150px;
-  font-family: Kalam;
-  
-} 
+.content img{
+  margin-top: 180px;
+}
+
 
 
 .subtitle {
-  font-size: 40px;
+  margin-top: 30px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  font-family: Inter-Tight;
+  font-family: 'Playpen Sans', cursive;
   top:0px;
 }
 
 
 .button {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   padding: 16px 28px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 12px;
-  color: var(--text-body, #fff);
-  font-family: Inter-Tight;
+  color: var(--text-body, #4d00a8);
+  font-family: 'Playpen Sans', cursive;
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
   height:"200px";
   width:"500px";
-  border: 1px solid #fff;
+  border: 1px solid #4d00a8;
 }
 
 .button:hover {
-  background: var(--button-primary-hover, #5a00c2);
+  background: var(--button-primary-hover, #d8c7ec);
 }
 
 .button:active {
@@ -78,3 +66,4 @@ body {
   background: var(--button-primary-disabled, #4d00a8);
   cursor: not-allowed;
 }
+

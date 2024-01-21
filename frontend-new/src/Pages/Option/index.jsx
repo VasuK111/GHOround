@@ -5,14 +5,18 @@ import { ForceGraph2D } from "react-force-graph";
 import { useRef } from "react";
 import { Modal } from "antd";
 import close from "../../Assets/close.svg";
-import { handleFetchGasData } from "../Client/getGasData";
+import { handleFetchGasData } from "../Client/getGasData.js";
 import { IoWarningOutline } from "react-icons/io5";
 import { CircularProgress } from "@mui/material";
-import { stakeAbi } from "./abi";
+import stakeAbi from "./abi.js";
 import { ethers } from "ethers";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import gif from "../Home/gif.gif";
+
+
+
+
 
 const TaskModal = ({ visible, setVisible }) => {
   const navigate = useNavigate();
@@ -72,14 +76,14 @@ const TaskModal = ({ visible, setVisible }) => {
               <IoWarningOutline size={40} />
               <div>
                 In order to participate in the network, you need to stake 0.1
-                ETH into the network to ensure it's economic security. Any
+                GHO into the network to ensure it's economic security. Any
                 malicious activity will result in slashing of your stake.
               </div>
             </div>
           </div>
           <div className={styles.modalContentItem}>
             <div className={styles.modalContentItemValue}>
-              Staking Amount: 0.1 ETH
+              Staking Amount: 0.1 GHO
             </div>
           </div>
           <div className={styles.gasHeader}>Gas Data</div>
@@ -168,11 +172,14 @@ const Option = () => {
           <a href="/users">
             <button className={styles.actionButton} >Borrowing Models</button>
           </a>
-        </div>
+        
         <TaskModal visible={visible} setVisible={setVisible} />
       </div>
-    </div>
+      </div>
+      </div>
+    
   );
 };
+
 
 export default Option;

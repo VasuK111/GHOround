@@ -1,5 +1,10 @@
 import styles from "./Swap.module.css";
 import React, { useEffect, useState } from "react";
+import SwapVerticalCircleIcon from '@mui/icons-material/SwapVerticalCircle';
+import SwapVertIcon from '@mui/icons-material/SwapVert';
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 import close from "./../../Assets/close.svg";
 import { Modal } from "antd";
@@ -15,6 +20,8 @@ const TaskModal = ({
     clientNumber,
     layerNumber,
     activationFn,
+    chain1,
+    chain2,
     optimiser,
     setVisible,
     setPayVisible,
@@ -24,7 +31,10 @@ const TaskModal = ({
     setClientNumber,
     setLayerNumber,
     setActivationFn,
+    setChain1,
+    setChain2,
     setOptimiser,
+
   }) => {
     const [loading, setLoading] = useState(false);
     const [post, setPost] = useState(null);
@@ -34,7 +44,7 @@ const TaskModal = ({
       setLoading(true);
       setPayVisible(true);
     };
-  
+
   
     return (
       <Modal
@@ -46,30 +56,53 @@ const TaskModal = ({
       >
         <div className={styles.modalContainer}>
           <div className={styles.modalTitle}>Send</div>
-          <div className={styles.modalContent}>
-            
-            {/* <div  className={styles.swap} >
-            <img src={swap} />
-            </div> */}
-            <div className={styles.modalContentItem}>
-             Address
-              <input
-                className={styles.modalContentItemInput}
-                placeholder="0x00000...."
-                value={value}
-                onChange={(e) => setValue(Number(e.target.value))}
-              />
-            </div>
-            <div className={styles.modalContentItem}>
-              Amount
-              <input
-                className={styles.modalContentItemInput}
-                placeholder="GHO"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            
+                
+            <div className={styles.modalContentItem}>From
+            <FormControl fullWidth>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={chain1}
+                defaultValue={"ETHEREUM"}
+                onChange={(e) => setChain1(e.target.value)}
+                sx={{
+                  color: "#fff",
+                  fontFamily: "Inter-Tight",
+                  fontWeight: 500,
+                  fontSize: 20,
+                }}
+              >
+                <MenuItem value={"Ethereum"}>GHO</MenuItem>
+                <MenuItem value={"Polygon"}>MATIC</MenuItem>
+                <MenuItem value={"Arbitrum"}>ARB</MenuItem>
+              </Select>
+            </FormControl>
+          </div><div>
+          <SwapVertIcon color="secondary"  className={styles.swap} sx={{fontSize:40}}/></div>
+          <div className={styles.modalContentItem}>To
+            <FormControl fullWidth>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={chain2}
+                defaultValue={"POLYGON"}
+                onChange={(e) => setChain2(e.target.value)}
+                sx={{
+                  color: "#fff",
+                  fontFamily: "Inter-Tight",
+                  fontWeight: 500,
+                  fontSize: 20,
+                }}
+              >
+                
+                <MenuItem value={"Polygon"}>MATIC</MenuItem>
+                <MenuItem value={"Arbitrum"}>ARB</MenuItem>
+                <MenuItem value={"Ethereum"}>ETH</MenuItem>
+              </Select>
+            </FormControl>
           </div>
+            
+          <div>
           <div className={styles.modalButtonGroup}>
             <button
               className={styles.modalDepositButton}
@@ -88,10 +121,12 @@ const TaskModal = ({
             </button>
           </div>
           </div>
-        
+          </div>
+    
       </Modal>
     );
   }
+  
   
   const Send = () => {
     const [activeTab, setActiveTab] = React.useState(0);
@@ -103,6 +138,8 @@ const TaskModal = ({
     const [clientNumber, setClientNumber] = useState(3);
     const [layerNumber, setLayerNumber] = useState(2);
     const [activationFn, setActivationFn] = useState("");
+    const [chain1, setChain1] = useState("");
+    const [chain2, setChain2] = useState("");
     const [optimiser, setOptimiser] = useState("");
   
     const handleTabChange = (index) => {
@@ -126,6 +163,8 @@ const TaskModal = ({
         clientNumber={clientNumber}
         layerNumber={layerNumber}
         activationFn={activationFn}
+        chain1={chain1}
+        chain2={chain2}
         optimiser={optimiser}
         setVisible={setCreateVisible}
         setPayVisible={setVisible}
@@ -135,7 +174,10 @@ const TaskModal = ({
         setClientNumber={setClientNumber}
         setLayerNumber={setLayerNumber}
         setActivationFn={setActivationFn}
+        setChain1={setChain1}
+        setChain2={setChain2}
         setOptimiser={setOptimiser}
+        
       />
       </>
     );

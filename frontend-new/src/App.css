@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Inter-Tight;
-  src: url(./Fonts/Inter_Tight/InterTight-VariableFont_wght.ttf);
-}
-
 .App {
   text-align: center;
 }
@@ -14,6 +9,7 @@
 
 body {
   background-color: #000435;
+  font-family: 'Playpen Sans', cursive;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,15 +1,73 @@
+.cards{
+    display:flex;
+    flex-direction: row;
+    column-gap: 25px;
+    align-items: center;
+}
+
+
+.card{
+    display:flex;
+    flex-direction: column;
+    background-color: #000435;
+    color:white;
+    border:1px solid whitesmoke; 
+    border-radius: 10px;
+    justify-content: space-evenly;
+    gap: 30px 0px;
+    height:320px;
+    width:300px;
+}
+.card:hover{
+  border:#ffffff;
+  cursor:pointer;
+}
+
+.cardTitle{
+    font-size: 34px;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-grow: 4;
+    text-align: left;
+    font-weight: 300px;
+    font-family: 'Playpen Sans', cursive;
+
+}
+
+.cardSubtitle{
+    flex-grow: 1;
+    text-align:left;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 30px;
+    font-family: 'Playpen Sans', cursive;
+
+}
+
+.button{
+    color: black;
+    background: whitesmoke;
+    font-weight: 400;
+    font-size: 30px;
+    flex-grow: 1;
+    font-weight:300;
+    border-radius: 10px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.add{
+
+    height:150px;
+    width:150px;
+    background-color: #000435;
+    border: 0px;
+    align-self:center;
+    font-family: 'Playpen Sans', cursive;
+}
 
 
 .modal {
     color: #ffffff;
-  }
-
-
-  .modalConatiner{
-    display:flex;
-
-    justify-content: center;
-    align-items: center;
   }
   .modalHeader {
     background: #16182e;
@@ -28,7 +86,7 @@
   
   .modalTitle {
     font-size: 20px;
-    font-family: Inter-Tight;
+    font-family: 'Playpen Sans', cursive;
     font-style: normal;
     font-weight: 400;
     color: #ffffff;
@@ -112,23 +170,3 @@
     color: #ffffff;
     padding: 20px 0;
   }
-
-
-.button {
-  background: #242944;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: Inter-Tight;
-  font-weight: 600;
-  border: 2px solid #242944;
-  color: #ffffff;
-  width: 100px;
-  font-size: 16px;
-}
-
-  
