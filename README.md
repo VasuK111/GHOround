@@ -5,6 +5,7 @@ that has GHO - AaVE's stablecoin as it's backbone.
 
 **The project *GHOround* is a proof-of-concept of the original idea of building a generalisable platform for lending & borrowing AI models while keeping them safe, secure & robust. The objective was to create a general framework that would enable any kind of AI model to be lended on the platform for some other borrower to be used by. ALl transactions on the platform happen in GHO coin**
 
+
 * Users can come & build their trading strategies for various tokens of different DEXs & chains & then create models for them.
   
 * They can [lend those models to borrowers](https://github.com/VasuK111/Swallet/blob/88982bf2dd97fe9e7603ea6701d1bb62bb8b8aa1/contracts/lender_ccip.sol) & get a [upfront fees in GHO](https://github.com/VasuK111/Swallet/blob/88982bf2dd97fe9e7603ea6701d1bb62bb8b8aa1/contracts/borrower_ccip.sol) tokens.
@@ -35,6 +36,15 @@ that has GHO - AaVE's stablecoin as it's backbone.
 All of this process described above is smoothly iluustrated in the following diagram:  
 
 ## Contract Addresses
+
+* `0x39F1d105446E32942318F63c1363a835F9BD8dCF` -- [lender_ccip](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/lender_ccip.sol)
+* `0x1F2E135F5a90EDcAEf32Bae4804eb894418645Cc` -- [borrower_ccip](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/borrower_ccip.sol)
+* `0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59` -- [sendGHO_ccip](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/sendGHO_ccip.sol)
+* `0x147F6d5B83166043C0784cD688AFE5C54f4f295a` -- [creditDelegationVault](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/creditDelegationVault.sol)
+* `0x494e65506Bf2a0d0650aE789bD7299a41EAFf1Cb` -- [mockGHOToken](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/mocks/mockGhoToken.sol)
+* `0x502726A056D32Fc3362Eb21095401dd93Fa47fC3` -- [mockAToken](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/mocks/mockAToken.sol)
+* `0x0f55c1C9250fC77f5261B9773cACB6d6b455fB1C` -- [Facilitator](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/Facilitator.sol)
+* `0xF0138ef0b7D6Ed38A5091a2B4AcEa2A05072Ea51` -- [UIGhoDataProvider](https://github.com/VasuK111/Swallet/blob/8e7751ecb6a261b25dc817f8fb5aaea3f18677ad/contracts/UIGHoDataProvider.sol)
 
 ## FAQs
 * How does the facilitator aspect works ?
