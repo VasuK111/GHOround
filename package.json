@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@aave/contract-helpers": "^1.22.0",
+    "@aave/math-utils": "^1.22.0",
+    "@bgd-labs/aave-address-book": "^2.17.0",
+    "@chainlink/contracts-ccip": "^1.2.1",
+    "dayjs": "^1.11.10",
+    "ethers": "^5.7.2"
+  }
+}
