@@ -3,8 +3,6 @@
 GHOround is the state-of-the-art platform where anyone round the globe can become a part of a new emerging ecosystem of **lending & borrowing AI models** 
 that has GHO - AaVE's stablecoin as it's backbone.
 
-**The project *GHOround* is a proof-of-concept of the original idea of building a generalisable platform for lending & borrowing AI models while keeping them safe, secure & robust. The objective was to create a general framework that would enable any kind of AI model to be lended on the platform for some other borrower to be used by. ALl transactions on the platform happen in GHO coin**
-
 
 * Users can come & build their trading strategies for various tokens of different DEXs & chains & then create models for them.
   
